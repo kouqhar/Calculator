@@ -38,7 +38,7 @@
       -ms-flex-direction: column;
           flex-direction: column;
   height: 95%;
-  width: 90%;
+  width: 100%;
   max-width: 500px;
   margin-inline: auto;
   background: blue;
