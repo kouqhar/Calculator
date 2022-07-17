@@ -1,16 +1,16 @@
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-%displayFlexCenter{
+%displayFlexCenter {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.wrapper{
+.wrapper {
   @extend %displayFlexCenter;
   flex-direction: column;
   justify-content: space-between;
@@ -18,18 +18,20 @@
   height: 100vh;
   width: 100%;
   background-color: teal;
-  .calculator__container{
+
+  .calculator__container {
     @extend %displayFlexCenter;
     flex-direction: column;
     height: 95%;
-    width: 60%;
+    width: 90%;
     max-width: 500px;
     margin-inline: auto;
     background: blue;
     border-radius: .3rem;
     overflow: hidden;
-    box-shadow: 10px 10px 1px 5px #2D0001;
-    .display{
+    box-shadow: 10px 10px 5px 5px #2D0001;
+
+    .display {
       display: flex;
       flex-direction: column;
       align-items: flex-end;
@@ -42,15 +44,18 @@
       min-height: 20%;
       width: 100%;
       padding: .2rem .55rem;
-      &-inputs{
+
+      &-inputs {
         max-height: 100%;
       }
-      .inputs{
+
+      .inputs {
         max-height: 100%;
         font-weight: bolder;
       }
     }
-    .calculator__keys{
+
+    .calculator__keys {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       background-color: lightgray;
@@ -58,58 +63,71 @@
       height: 100%;
       width: 100%;
       overflow: hidden;
-      button{
+
+      button {
         @extend %displayFlexCenter;
-        background-color: #AC011C;
+        background-color: teal;
         color: white;
         margin: .3rem;
         font-weight: bolder;
         font-size: 1.35rem;
-        // border: none;
         border-radius: .5rem;
+        border: none;
         overflow: hidden;
         cursor: pointer;
         transition: transform .2s ease-in-out;
-        &:hover{
+
+        &:hover {
           transform: scale(1.04);
         }
       }
-      #clear{
+
+      #clear {
         grid-column: 1/3;
         background-color: #F60030;
       }
-      #zero{
+
+      #zero {
         grid-column: 1/3;
       }
-      #equals{
+
+      #equals {
         grid-column: 4/5;
         grid-row: 4/6;
         background-color: #2D0001;
       }
-      #decimal{
+
+      #decimal {
         background-color: rgba(200, 0, 0, .85);
       }
-      #divide, #multiply, #subtract, #add{
-        background-color: teal;
+
+      #divide,
+      #multiply,
+      #subtract,
+      #add {
+        background-color: #AC011C;
       }
     }
   }
-    .footer{
-      @extend %displayFlexCenter;
-      justify-content: flex-end;
-      padding-block: .1rem;
-      padding-inline-end: 1rem;
-      background-color: #2D0001;
-      color: #F8F9E4; 
-      width: 100%;
-      span{
-        color: teal;
-        padding-inline: .2rem;
-      }
-      a{
-        color: teal;
-        padding-inline: .3rem;
-        text-decoration: none;
-      }
+
+  .footer {
+    @extend %displayFlexCenter;
+    justify-content: flex-end;
+    padding-block: .1rem;
+    padding-inline-end: 1rem;
+    background-color: #2D0001;
+    color: #F8F9E4;
+    width: 100%;
+
+    span {
+      color: teal;
+      padding-inline: .2rem;
     }
+
+    a {
+      color: teal;
+      padding-inline: .3rem;
+      text-decoration: none;
+    }
+  }
 }

@@ -38,14 +38,14 @@
       -ms-flex-direction: column;
           flex-direction: column;
   height: 95%;
-  width: 60%;
+  width: 90%;
   max-width: 500px;
   margin-inline: auto;
   background: blue;
   border-radius: .3rem;
   overflow: hidden;
-  -webkit-box-shadow: 10px 10px 1px 5px #2D0001;
-          box-shadow: 10px 10px 1px 5px #2D0001;
+  -webkit-box-shadow: 10px 10px 5px 5px #2D0001;
+          box-shadow: 10px 10px 5px 5px #2D0001;
 }
 
 .wrapper .calculator__container .display {
@@ -94,12 +94,13 @@
 }
 
 .wrapper .calculator__container .calculator__keys button {
-  background-color: #AC011C;
+  background-color: teal;
   color: white;
   margin: .3rem;
   font-weight: bolder;
   font-size: 1.35rem;
   border-radius: .5rem;
+  border: none;
   overflow: hidden;
   cursor: pointer;
   -webkit-transition: -webkit-transform .2s ease-in-out;
@@ -140,8 +141,11 @@
   background-color: rgba(200, 0, 0, 0.85);
 }
 
-.wrapper .calculator__container .calculator__keys #divide, .wrapper .calculator__container .calculator__keys #multiply, .wrapper .calculator__container .calculator__keys #subtract, .wrapper .calculator__container .calculator__keys #add {
-  background-color: teal;
+.wrapper .calculator__container .calculator__keys #divide,
+.wrapper .calculator__container .calculator__keys #multiply,
+.wrapper .calculator__container .calculator__keys #subtract,
+.wrapper .calculator__container .calculator__keys #add {
+  background-color: #AC011C;
 }
 
 .wrapper .footer {
